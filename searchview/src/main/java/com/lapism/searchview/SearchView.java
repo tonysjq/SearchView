@@ -228,7 +228,7 @@ public class SearchView extends FrameLayout implements View.OnClickListener {
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
                 if (newState == RecyclerView.SCROLL_STATE_DRAGGING) {
                     // mRecyclerView.setLayoutTransition(null);
-                    hideKeyboard();
+//                    hideKeyboard();
 
                 } else {
                     if (newState == RecyclerView.SCROLL_STATE_IDLE) {
