@@ -1260,6 +1260,10 @@ public class SearchView extends FrameLayout implements View.OnClickListener {
     public View getEditText(){
         return mSearchEditText;
     }
+
+    public View getCardView(){
+        return mCardView;
+    }
 }
 
 
