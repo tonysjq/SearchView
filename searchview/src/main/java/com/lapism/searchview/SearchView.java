@@ -820,8 +820,9 @@ public class SearchView extends FrameLayout implements View.OnClickListener {
             if (mVoice) {
                 mVoiceImageView.setVisibility(View.GONE);
             }
+            showSuggestions();
         }
-        showSuggestions();
+
     }
 
     public void removeFocus() {
