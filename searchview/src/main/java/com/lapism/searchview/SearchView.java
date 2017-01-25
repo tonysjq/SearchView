@@ -33,6 +33,7 @@ import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
 import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -546,7 +547,7 @@ public class SearchView extends FrameLayout implements View.OnClickListener {
 
     public void setVersionMargins(int version) {
         CardView.LayoutParams params = new CardView.LayoutParams(
-                setCardViewWidth(-1),
+                LayoutParams.MATCH_PARENT,
                 CardView.LayoutParams.WRAP_CONTENT
         );
 
@@ -1264,18 +1265,14 @@ public class SearchView extends FrameLayout implements View.OnClickListener {
     public View getCardView(){
         return mCardView;
     }
-   public int setCardViewWidth(int width){
-       int returnWidth;
-       if (width==-1)
-       {
-           returnWidth=300;
-       }
-       else {
-           returnWidth=width;
-       }
-       return  returnWidth;
+    public void setCardViewWidth(int width){
 
-   }
+            LayoutParams params= (LayoutParams) mCardView.getLayoutParams();
+            params.width=width;
+            params.gravity= Gravity.CENTER_HORIZONTAL;
+            mCardView.setLayoutParams(params);
+
+    }
 
 
 }
