@@ -546,7 +546,7 @@ public class SearchView extends FrameLayout implements View.OnClickListener {
 
     public void setVersionMargins(int version) {
         CardView.LayoutParams params = new CardView.LayoutParams(
-                CardView.LayoutParams.MATCH_PARENT,
+                setCardViewWidth(-1),
                 CardView.LayoutParams.WRAP_CONTENT
         );
 
@@ -1264,6 +1264,20 @@ public class SearchView extends FrameLayout implements View.OnClickListener {
     public View getCardView(){
         return mCardView;
     }
+   public int setCardViewWidth(int width){
+       int returnWidth;
+       if (width==-1)
+       {
+           returnWidth=300;
+       }
+       else {
+           returnWidth=width;
+       }
+       return  returnWidth;
+
+   }
+
+
 }
 
 
